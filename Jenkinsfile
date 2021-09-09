@@ -12,7 +12,7 @@ pipeline {
 		stage('Build Docker Image'){
 			steps {
 				sh 'cd /var/lib/jenkins/workspace/pipeline2/webapps-deploy'
-				sh 'cp /var/lib/jenkins/workspace/pipeline2/webapps-deploy/* /var/lib/jenkins/workspace/pipeline2'
+				sh 'cp  /var/lib/jenkins/workspace/pipeline2/webapps-deploy/* /var/lib/jenkins/workspace/pipeline2'
 				sh 'docker rmi hutchhari1917/pipelinetest1:v1'
 				sh 'docker build -t hutchhari1917/pipelinetest1:v1 .'
 			}
